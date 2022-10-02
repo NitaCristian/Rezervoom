@@ -22,13 +22,13 @@ namespace Rezervoom.Models
         }
 
         /// <summary>
-        /// Method to get all the rezervations made by a user
+        /// Method to get all the rezervations
         /// </summary>
         /// <param name="username">Username of the user</param>
         /// <returns>List of rezervations</returns>
-        public IEnumerable<Rezervation> GetRezervationsForUser(string username)
+        public IEnumerable<Rezervation> GetAllRezervations()
         {
-            return _rezervationBook.GetRezervationsForUser(username);
+            return _rezervationBook.GetAllRezervations();
         }
 
         /// <summary>

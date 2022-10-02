@@ -43,7 +43,7 @@ namespace Rezervoom
             }
 
             // Get all the rezervations
-            var rezervations = hotel.GetRezervationsForUser("Cristian");
+            var rezervations = hotel.GetAllRezervations();
 
             base.OnStartup(e);
         }

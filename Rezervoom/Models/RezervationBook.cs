@@ -17,10 +17,10 @@ namespace Rezervoom.Models
             _reservations = new List<Rezervation>();
         }
 
-        // Method to get all the rezervations made by a user
-        public IEnumerable<Rezervation> GetRezervationsForUser(string username)
+        // Method to get all the rezervations
+        public IEnumerable<Rezervation> GetAllRezervations()
         {
-            return _reservations.Where(r => r.Username == username);
+            return _reservations;
         }
 
         // Method to add a rezervation to the list of all rezervations
