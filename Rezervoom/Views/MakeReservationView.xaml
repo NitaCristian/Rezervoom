@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Rezervoom.Views.MakeRezervationView"
+﻿<UserControl x:Class="Rezervoom.Views.MakeReservationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,7 +15,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Make Rezervation" Grid.Row="0" Style="{StaticResource Header}"/>
+        <TextBlock Text="Make Reservation" Grid.Row="0" Style="{StaticResource Header}"/>
 
         <Grid Grid.Row="1" Margin="0 25 0 0">
             <Grid.RowDefinitions>

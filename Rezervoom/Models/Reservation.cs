@@ -22,12 +22,12 @@ namespace Rezervoom.Models
             EndDate = endTime;
         }
 
-        internal bool Conflicts(Reservation rezervation)
+        internal bool Conflicts(Reservation reservation)
         {
-            if (rezervation.RoomID != RoomID) return false;
+            if (reservation.RoomID != RoomID) return false;
 
-            return rezervation.StartDate < EndDate || 
-                rezervation.EndDate > StartDate;
+            return reservation.StartDate < EndDate || 
+                reservation.EndDate > StartDate;
         }
     }
 }

@@ -16,9 +16,9 @@ namespace Rezervoom.ViewModels
         public string StartDate => _reservation.StartDate.ToString("d");
         public string EndDate => _reservation.EndDate.ToString("d");
 
-        public ReservationViewModel(Reservation rezervation)
+        public ReservationViewModel(Reservation reservation)
         {
-            _reservation = rezervation;
+            _reservation = reservation;
         }
     }
 }

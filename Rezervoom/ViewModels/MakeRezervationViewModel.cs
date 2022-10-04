@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Rezervoom.ViewModels
 {
-    public class MakeRezervationViewModel : ViewModelBase
+    public class MakeReservationViewModel : ViewModelBase
     {
         private string? _username;
 
@@ -73,7 +73,7 @@ namespace Rezervoom.ViewModels
         public ICommand? SubmitCommand { get; }
         public ICommand? CancelCommand { get; }
 
-        public MakeRezervationViewModel()
+        public MakeReservationViewModel()
         {
 
         }

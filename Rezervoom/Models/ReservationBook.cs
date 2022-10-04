@@ -16,22 +16,22 @@ namespace Rezervoom.Models
             _reservations = new List<Reservation>();
         }
 
-        public IEnumerable<Reservation> GetAllRezervations()
+        public IEnumerable<Reservation> GetAllReservations()
         {
             return _reservations;
         }
 
-        public void AddRezervation(Reservation newRezervation)
+        public void AddReservation(Reservation newReservation)
         {
-            foreach (Reservation existingRezervation in _reservations)
+            foreach (Reservation existingReservation in _reservations)
             {
-                if (existingRezervation.Conflicts(newRezervation))
+                if (existingReservation.Conflicts(newReservation))
                 {
-                    throw new RezervationConflictException(existingRezervation, newRezervation);
+                    throw new ReservationConflictException(existingReservation, newReservation);
                 }
             }
 
-            _reservations.Add(newRezervation);
+            _reservations.Add(newReservation);
         }
     }
 }

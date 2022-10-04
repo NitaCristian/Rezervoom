@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Rezervoom.Views
 {
     /// <summary>
-    /// Interaction logic for RezervationListingView.xaml
+    /// Interaction logic for ReservationListingView.xaml
     /// </summary>
-    public partial class RezervationListingView : UserControl
+    public partial class ReservationListingView : UserControl
     {
-        public RezervationListingView()
+        public ReservationListingView()
         {
             InitializeComponent();
         }
