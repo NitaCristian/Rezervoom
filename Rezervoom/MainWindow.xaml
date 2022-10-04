@@ -8,7 +8,7 @@
         Title="Rezervoom" Height="450" Width="800"
         FontSize="14">
     <Grid Margin="20 10" MaxWidth="600">
-        <!--<views:MakeRezervationView/>-->
-        <views:RezervationListingView/>
+        <!--<views:MakeRezervationView DataContext="{Binding CurrentViewModel}"/>-->
+        <views:RezervationListingView DataContext="{Binding CurrentViewModel}"/>
     </Grid>
 </Window>

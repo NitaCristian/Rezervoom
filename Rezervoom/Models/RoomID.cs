@@ -8,9 +8,7 @@ namespace Rezervoom.Models
 {
     public class RoomID
     {
-        // Floor the room is at
         public int FloorNumber { get; }
-        // Number of the room
         public int RoomNumber { get; }
 
         public RoomID(int floorNumber, int roomNumber)
@@ -21,10 +19,9 @@ namespace Rezervoom.Models
 
         public override string ToString()
         {
-            return $"{FloorNumber}:{RoomNumber}";
+            return $"{FloorNumber}{RoomNumber}";
         }
         
-        // Method to check whether an object is equal to the current object
         public override bool Equals(object? obj)
         {
             return obj is RoomID roomID &&

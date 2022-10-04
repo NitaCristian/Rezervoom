@@ -7,26 +7,23 @@ using System.Threading.Tasks;
 
 namespace Rezervoom.Models
 {
-    public class RezervationBook
+    public class ReservationBook
     {
-        // A list of all registrations
-        private readonly List<Rezervation> _reservations;
+        private readonly List<Reservation> _reservations;
 
-        public RezervationBook()
+        public ReservationBook()
         {
-            _reservations = new List<Rezervation>();
+            _reservations = new List<Reservation>();
         }
 
-        // Method to get all the rezervations
-        public IEnumerable<Rezervation> GetAllRezervations()
+        public IEnumerable<Reservation> GetAllRezervations()
         {
             return _reservations;
         }
 
-        // Method to add a rezervation to the list of all rezervations
-        public void AddRezervation(Rezervation newRezervation)
+        public void AddRezervation(Reservation newRezervation)
         {
-            foreach (Rezervation existingRezervation in _reservations)
+            foreach (Reservation existingRezervation in _reservations)
             {
                 if (existingRezervation.Conflicts(newRezervation))
                 {

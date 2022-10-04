@@ -9,7 +9,7 @@ namespace Rezervoom.Models
     public class Hotel
     {
         // Rezervations book that holds all the rezervations
-        private readonly RezervationBook _rezervationBook;
+        private readonly ReservationBook _rezervationBook;
 
         // Name of the hotel
         public string Name { get; }
@@ -18,7 +18,7 @@ namespace Rezervoom.Models
         {
             Name = name;  
             
-            _rezervationBook = new RezervationBook();
+            _rezervationBook = new ReservationBook();
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Rezervoom.Models
         /// </summary>
         /// <param name="username">Username of the user</param>
         /// <returns>List of rezervations</returns>
-        public IEnumerable<Rezervation> GetAllRezervations()
+        public IEnumerable<Reservation> GetAllRezervations()
         {
             return _rezervationBook.GetAllRezervations();
         }
@@ -35,7 +35,7 @@ namespace Rezervoom.Models
         /// Method to register a rezervation
         /// </summary>
         /// <param name="rezervation"></param>
-        public void MakeRezervation(Rezervation rezervation)
+        public void MakeRezervation(Reservation rezervation)
         {
             _rezervationBook.AddRezervation(rezervation);
         }

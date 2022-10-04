@@ -9,22 +9,22 @@ namespace Rezervoom.Exceptions
 {
     public class RezervationConflictException : Exception
     {
-        public Rezervation ExistingRezervation { get; }
-        public Rezervation IncomingRezervation { get; }
+        public Reservation ExistingRezervation { get; }
+        public Reservation IncomingRezervation { get; }
 
-        public RezervationConflictException(Rezervation existingRezervation, Rezervation incomingRezervation)
+        public RezervationConflictException(Reservation existingRezervation, Reservation incomingRezervation)
         {
             ExistingRezervation = existingRezervation;
             IncomingRezervation = incomingRezervation;
         }
 
-        public RezervationConflictException(string message, Rezervation existingRezervation, Rezervation incomingRezervation) : base(message)
+        public RezervationConflictException(string message, Reservation existingRezervation, Reservation incomingRezervation) : base(message)
         {
             ExistingRezervation = existingRezervation;
             IncomingRezervation = incomingRezervation;
         }
         
-        public RezervationConflictException(string message, Exception inner, Rezervation existingRezervation, Rezervation incomingRezervation) : base(message, inner)
+        public RezervationConflictException(string message, Exception inner, Reservation existingRezervation, Reservation incomingRezervation) : base(message, inner)
         {
             ExistingRezervation = existingRezervation;
             IncomingRezervation = incomingRezervation;
