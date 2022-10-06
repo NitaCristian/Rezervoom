@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Reservoom.Stores;
+using Rezervoom.Models;
+using Rezervoom.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +11,18 @@ namespace Reservoom.Commands
 {
     public class NavigateCommand : CommandBase
     {
+        private readonly NavigationStore _navigationStore;
+        private readonly Func<ViewModelBase> _createViewModel;
+
+        public NavigateCommand(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
+        {
+            _navigationStore = navigationStore;
+            _createViewModel = createViewModel;
+        }
+
         public override void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            _navigationStore.CurrentViewModel = _createViewModel();
         }
     }
 }

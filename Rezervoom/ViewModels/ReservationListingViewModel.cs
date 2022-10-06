@@ -1,4 +1,6 @@
-﻿using Rezervoom.Models;
+﻿using Reservoom.Commands;
+using Reservoom.Stores;
+using Rezervoom.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,8 +19,10 @@ namespace Rezervoom.ViewModels
 
         public ICommand? MakeReservationCommand { get; }
 
-        public ReservationListingViewModel()
+        public ReservationListingViewModel(NavigationStore navigationStore, Func<MakeReservationViewModel> createMakeReservationViewModel)
         {
+            MakeReservationCommand = new NavigateCommand(navigationStore, createMakeReservationViewModel);
+
             _reservations = new ObservableCollection<ReservationViewModel>();
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(1, 2), "Cristian Nita", DateTime.Now, DateTime.Now)));
             _reservations.Add(new ReservationViewModel(new Reservation(new RoomID(3, 4), "Isabela Nita", DateTime.Now, DateTime.Now)));

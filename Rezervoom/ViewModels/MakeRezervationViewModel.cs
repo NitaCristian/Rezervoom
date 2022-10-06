@@ -1,4 +1,5 @@
 ﻿using Reservoom.Commands;
+using Reservoom.Stores;
 using Rezervoom.Models;
 using System;
 using System.Collections.Generic;
@@ -75,9 +76,10 @@ namespace Rezervoom.ViewModels
         public ICommand? SubmitCommand { get; }
         public ICommand? CancelCommand { get; }
 
-        public MakeReservationViewModel(Hotel hotel)
+        public MakeReservationViewModel(Hotel hotel, NavigationStore navigationStore, Func<ReservationListingViewModel> createReservationListingViewModel)
         {
             SubmitCommand = new MakeReservationCommand(this, hotel);
+            CancelCommand = new NavigateCommand(navigationStore, createReservationListingViewModel);
         }
     }
 }

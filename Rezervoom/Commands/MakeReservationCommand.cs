@@ -52,7 +52,6 @@ namespace Reservoom.Commands
             }
             catch (ReservationConflictException e)
             {
-
                 MessageBox.Show("This room is already taken.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
